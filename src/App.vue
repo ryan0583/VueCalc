@@ -2,10 +2,7 @@
   <div id="app" class="container">
     <div class="row">
 
-      <div class="col-1 col-sm-2 col-md-3 col-lg-4">
-      </div>
-
-      <div class="col-9 col-sm-8 col-md-6 col-lg-4">
+      <div>
         <div class="row">
           <Calculation/>
         </div>
@@ -18,9 +15,6 @@
         <ButtonRow :values="['4', '5', '6', 'x']"></ButtonRow>
         <ButtonRow :values="['1', '2', '3', '-']"></ButtonRow>
         <ButtonRow :values="['.', '0', '=', '+']"></ButtonRow>
-      </div>
-
-      <div class="col-2 col-sm-2 col-md-3 col-lg-4">
       </div>
 
     </div>
