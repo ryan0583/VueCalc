@@ -1,6 +1,6 @@
 <template>
   <div class="col-3 mb-3">
-    <button class="mb-3" @click="clear">C</button>
+    <button @click="clear">C</button>
   </div>
 </template>
 
@@ -17,6 +17,8 @@ export default {
 <style scoped>
 button
 {
+  height: 70px;
+  width: 80px;
   background-color: Red;
   color: white;
 }
