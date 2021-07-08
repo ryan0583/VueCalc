@@ -1,18 +1,24 @@
 <template>
-  <div class="row">
+  <div class="button-row">
     <Button v-for="value in values" :btnText=value></Button>
   </div>
 </template>
 
 <script>
-import Button from './Button.vue'
+import Button from "./Button.vue";
 
 export default {
   props: {
-    values: Array
+    values: Array,
   },
   components: {
-    Button
-  }
-}
+    Button,
+  },
+};
 </script>
+
+<style>
+.button-row {
+  display: flex;
+}
+</style>

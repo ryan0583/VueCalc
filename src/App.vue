@@ -1,13 +1,13 @@
 <template>
-  <div id="app" class="container">
-    <div class="row">
+  <div id="app" class="ml-3">
+    <div>
 
       <div>
-        <div class="row">
+        <div>
           <Calculation/>
         </div>
 
-        <div class="row">
+        <div class="line-2">
           <RunningTotal/>
           <CancelButton/>
         </div>
@@ -23,28 +23,37 @@
 </template>
 
 <script>
-import Calculation from './components/Calculation.vue';
-import RunningTotal from './components/RunningTotal.vue';
-import CancelButton from './components/CancelButton.vue';
-import ButtonRow from './components/ButtonRow.vue';
+import Calculation from "./components/Calculation.vue";
+import RunningTotal from "./components/RunningTotal.vue";
+import CancelButton from "./components/CancelButton.vue";
+import ButtonRow from "./components/ButtonRow.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Calculation,
     RunningTotal,
     CancelButton,
-    ButtonRow
-  }
-}
+    ButtonRow,
+  },
+};
 </script>
 
 <style>
-button
-{
-  width: 100%;
-  height: 100%;
-  font-size:24px;
+#app {
+  display: flex;
+  justify-content: center;
+}
+
+.line-2 {
+  display: flex;
+  justify-content: flex-start;
+}
+
+button {
+  height: 60px;
+  width: 70px;
+  font-size: 24px;
   border: none;
   border-width: 0px;
   border-radius: 50%;
@@ -54,16 +63,8 @@ button
   outline: none;
 }
 
-button:active
-{
-  	box-shadow: 0 5px #666;
-	  transform: translateY(4px);
-}
-
-input
-{
-  display:table-cell;
-  width:100%;
-  height:100%;
+button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 </style>

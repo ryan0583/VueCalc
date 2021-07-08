@@ -9,27 +9,22 @@ export default {
   methods: {
     clear: function() {
       this.$store.commit("clear");
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
-button
-{
-  height: 70px;
-  width: 80px;
+button {
   background-color: Red;
   color: white;
 }
 
-button:hover
-{
-	background-color: #DD0000;
+button:hover {
+  background-color: #dd0000;
 }
 
-button:active
-{
-	background-color: #DD0000;
+button:active {
+  background-color: #dd0000;
 }
 </style>

@@ -1,36 +1,29 @@
 <template>
-  <div class="col-3 mb-3">
+  <div class="mb-3 pl-1 pr-1">
     <button @keyup.1="buttonClicked" @click="buttonClicked">{{ btnText }}</button>
   </div>
 </template>
 
 <script>
-
 export default {
   props: {
     btnText: String,
   },
   methods: {
     buttonClicked: function() {
-      if (this.btnText === ".")
-      {
+      if (this.btnText === ".") {
         this.decimalClicked();
-      }
-      else if(isNaN(this.btnText))
-      {
-          this.operatorClicked();
-      }
-      else
-      {
-          this.numberClicked();
+      } else if (isNaN(this.btnText)) {
+        this.operatorClicked();
+      } else {
+        this.numberClicked();
       }
     },
 
     operatorClicked: function() {
       let operator = this.btnText;
-      if (operator === 'x')
-      {
-        operator = '*';
+      if (operator === "x") {
+        operator = "*";
       }
       this.$store.dispatch("performOperation", operator);
     },
@@ -40,28 +33,23 @@ export default {
     },
 
     numberClicked: function() {
-    	this.$store.dispatch("addNumber", this.btnText);
+      this.$store.dispatch("addNumber", this.btnText);
     },
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
-button
-{
-  height: 70px;
-  width: 80px;
+button {
   background-color: LightBlue;
   color: black;
 }
 
-button:hover
-{
-	background-color: #8bb6c4;
+button:hover {
+  background-color: #8bb6c4;
 }
 
-button:active
-{
+button:active {
   background-color: #8bb6c4;
 }
 </style>
